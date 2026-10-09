@@ -1,0 +1,896 @@
+* {
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+html {
+    scroll-behavior: smooth;
+}
+
+body {
+    font-family: "Montserrat", sans-serif;
+    background: #ffffff;
+    color: #111111;
+}
+
+
+/* =========================
+   NAVIGATION
+========================= */
+
+.navbar {
+    height: 85px;
+    background: #ffffff;
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+
+    padding: 0 6%;
+
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+
+    border-bottom: 1px solid #eeeeee;
+}
+
+.nav-logo img {
+    width: 120px;
+    height: 65px;
+    object-fit: contain;
+}
+
+nav {
+    display: flex;
+    gap: 35px;
+}
+
+nav a {
+    text-decoration: none;
+    color: #111111;
+
+    font-size: 13px;
+    font-weight: 700;
+
+    text-transform: uppercase;
+
+    transition: 0.3s;
+}
+
+nav a:hover {
+    color: #e50914;
+}
+
+.cart {
+    font-size: 20px;
+    font-weight: 700;
+}
+
+#cart-count {
+    background: #e50914;
+    color: white;
+
+    padding: 4px 8px;
+
+    border-radius: 50%;
+
+    font-size: 12px;
+}
+
+
+/* =========================
+   HERO
+========================= */
+
+.hero {
+
+    min-height: 90vh;
+
+    background-image:
+        url("background.jpg");
+
+    background-size: cover;
+    background-position: center;
+
+    position: relative;
+
+    display: flex;
+    align-items: center;
+
+    padding: 8%;
+}
+ 
+.hero {
+    background-image: url('mpahlas-background/hero-bg.jpg');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    min-height: 600px;
+  }
+
+
+.hero-overlay {
+
+    position: absolute;
+
+    inset: 0;
+
+    background: rgba(255,255,255,0.55);
+
+}
+
+.hero-overlay {
+    background: rgba(0, 0, 0, 0.6);
+}
+
+.hero-content {
+
+    position: relative;
+
+    max-width: 650px;
+
+    z-index: 2;
+
+}
+
+.small-title {
+
+    color: #e50914;
+
+    font-weight: 800;
+
+    font-size: 13px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 20px;
+}
+
+.hero h1 {
+
+    font-size: clamp(70px, 12vw, 150px);
+
+    line-height: 0.78;
+
+    font-weight: 900;
+
+    text-transform: uppercase;
+
+    color: #e50914;
+
+}
+
+.hero h1 span {
+
+    color: transparent;
+
+    -webkit-text-stroke: 3px #111111;
+
+}
+
+.hero-text {
+
+    max-width: 450px;
+
+    margin-top: 35px;
+
+    font-size: 18px;
+
+    line-height: 1.6;
+
+    font-weight: 500;
+}
+
+.hero-button {
+
+    display: inline-block;
+
+    margin-top: 30px;
+
+    padding: 16px 30px;
+
+    background: #111111;
+
+    color: #ffffff;
+
+    text-decoration: none;
+
+    font-weight: 800;
+
+    font-size: 13px;
+
+    letter-spacing: 1px;
+
+    transition: 0.3s;
+}
+
+.hero-button:hover {
+
+    background: #e50914;
+
+}
+
+
+/* =========================
+   INTRO
+========================= */
+
+.intro {
+
+    text-align: center;
+
+    max-width: 750px;
+
+    margin: auto;
+
+    padding: 100px 25px;
+}
+
+.red-text {
+
+    color: #e50914;
+
+    font-weight: 800;
+
+    font-size: 12px;
+
+    letter-spacing: 3px;
+
+    margin-bottom: 15px;
+}
+
+.intro h2 {
+
+    font-size: 45px;
+
+    font-weight: 900;
+
+    margin-bottom: 20px;
+}
+
+.intro p:last-child {
+
+    line-height: 1.8;
+
+    color: #666666;
+}
+
+
+/* =========================
+   SHOP
+========================= */
+
+.shop {
+
+    background: #f5f5f5;
+
+    padding: 100px 6%;
+}
+
+.section-heading {
+
+    text-align: center;
+
+    margin-bottom: 60px;
+}
+
+.section-heading p {
+
+    color: #e50914;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    letter-spacing: 3px;
+}
+
+.section-heading h2 {
+
+    font-size: 45px;
+
+    font-weight: 900;
+
+    margin-top: 10px;
+}
+
+
+/* PRODUCTS */
+
+.products {
+
+    max-width: 1200px;
+
+    margin: auto;
+
+    display: grid;
+
+    grid-template-columns:
+        repeat(3, 1fr);
+
+    gap: 25px;
+}
+
+.product-card {
+
+    background: white;
+
+    transition: 0.3s;
+}
+
+.product-card:hover {
+
+    transform: translateY(-8px);
+
+    box-shadow:
+        0 15px 40px rgba(0,0,0,0.12);
+}
+
+.product-image {
+    height: 350px;
+    position: relative;
+    overflow: hidden;
+}
+
+.product-image img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    object-position: center;
+}
+
+
+/*
+   PRODUCT BACKGROUNDS
+
+   Replace these URLs with
+   actual product photos later.
+*/
+
+.puffer {
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.1),
+            rgba(0,0,0,0.1)
+        ),
+        url("background.jpg");
+
+    background-size: cover;
+}
+
+.hoodie {
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.15),
+            rgba(0,0,0,0.15)
+        ),
+        url("background.jpg");
+
+    background-size: cover;
+
+    background-position: 30% center;
+}
+
+.retro {
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.1),
+            rgba(0,0,0,0.1)
+        ),
+        url("background.jpg");
+
+    background-size: cover;
+
+    background-position: 70% center;
+}
+
+.women {
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.1),
+            rgba(0,0,0,0.1)
+        ),
+        url("background.jpg");
+
+    background-size: cover;
+
+    background-position: center;
+}
+
+.cap {
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.1),
+            rgba(0,0,0,0.1)
+        ),
+        url("background.jpg");
+
+    background-size: cover;
+
+    background-position: 80% center;
+}
+
+.slutchi {
+
+    background:
+        linear-gradient(
+            rgba(0,0,0,0.1),
+            rgba(0,0,0,0.1)
+        ),
+        url("background.jpg");
+
+    background-size: cover;
+
+    background-position: 20% center;
+}
+
+
+/* BADGE */
+
+.badge {
+
+    position: absolute;
+
+    top: 15px;
+    left: 15px;
+
+    background: #e50914;
+
+    color: white;
+
+    padding: 8px 13px;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    letter-spacing: 1px;
+}
+
+
+/* PRODUCT INFO */
+
+.product-info {
+
+    padding: 25px;
+}
+
+.product-info h3 {
+
+    font-size: 18px;
+
+    margin-bottom: 10px;
+
+    font-weight: 800;
+}
+
+.product-info p {
+
+    color: #777777;
+
+    font-size: 13px;
+
+    line-height: 1.6;
+
+    margin-bottom: 20px;
+}
+
+.product-bottom {
+
+    display: flex;
+
+    justify-content: space-between;
+
+    align-items: center;
+}
+
+.product-bottom strong {
+
+    font-size: 18px;
+
+    color: #e50914;
+}
+
+.product-bottom button {
+
+    border: none;
+
+    background: #111111;
+
+    color: white;
+
+    padding: 11px 15px;
+
+    font-size: 10px;
+
+    font-weight: 800;
+
+    cursor: pointer;
+
+    transition: 0.3s;
+}
+
+.product-bottom button:hover {
+
+    background: #e50914;
+}
+
+
+/* =========================
+   ABOUT
+========================= */
+
+.about {
+
+    display: grid;
+
+    grid-template-columns: 1fr 1fr;
+
+    min-height: 650px;
+}
+
+.about-image {
+    background-image: 
+        linear-gradient(rgba(0,0,0,0.3), rgba(0,0,0,0.3)),
+        url("images/hoodie-photo.jpg");
+    background-size: cover;
+    background-position: center;
+}
+
+.about-content {
+
+    display: flex;
+
+    flex-direction: column;
+
+    justify-content: center;
+
+    padding: 10%;
+}
+
+.about-content h2 {
+
+    font-size: 60px;
+
+    line-height: 0.95;
+
+    font-weight: 900;
+
+    margin-bottom: 30px;
+}
+
+.about-content p {
+
+    color: #666666;
+
+    line-height: 1.8;
+
+    margin-bottom: 20px;
+
+    max-width: 500px;
+}
+
+.dark-button {
+
+    display: inline-block;
+
+    width: fit-content;
+
+    background: #111111;
+
+    color: white;
+
+    padding: 15px 25px;
+
+    text-decoration: none;
+
+    font-size: 11px;
+
+    font-weight: 800;
+
+    margin-top: 15px;
+}
+
+.dark-button:hover {
+
+    background: #e50914;
+}
+
+
+/* =========================
+   SLOGAN
+========================= */
+
+.slogan {
+
+    background: #e50914;
+
+    color: white;
+
+    padding: 100px 20px;
+
+    text-align: center;
+}
+
+.slogan h2 {
+
+    max-width: 900px;
+
+    margin: auto;
+
+    font-size: clamp(30px, 5vw, 60px);
+
+    line-height: 1.1;
+
+    font-weight: 900;
+}
+
+.slogan p {
+
+    margin-top: 30px;
+
+    font-size: 13px;
+
+    letter-spacing: 4px;
+
+    font-weight: 800;
+}
+
+
+/* =========================
+   CONTACT
+========================= */
+
+.contact {
+
+    text-align: center;
+
+    padding: 100px 20px;
+
+    max-width: 700px;
+
+    margin: auto;
+}
+
+.contact h2 {
+
+    font-size: 45px;
+
+    font-weight: 900;
+
+    margin-bottom: 20px;
+}
+
+.contact > p:not(.red-text) {
+
+    color: #666666;
+
+    line-height: 1.7;
+
+    margin-bottom: 30px;
+}
+
+.whatsapp-button {
+
+    display: inline-block;
+
+    background: #111111;
+
+    color: white;
+
+    text-decoration: none;
+
+    padding: 17px 30px;
+
+    font-size: 12px;
+
+    font-weight: 800;
+
+    transition: 0.3s;
+}
+
+.whatsapp-button:hover {
+
+    background: #e50914;
+}
+
+
+/* =========================
+   FOOTER
+========================= */
+
+footer {
+
+    background: #111111;
+
+    color: white;
+
+    text-align: center;
+
+    padding: 50px 20px;
+}
+
+.footer-logo img {
+
+    width: 150px;
+
+    height: 80px;
+
+    object-fit: contain;
+    margin-bottom: 20px;
+}
+
+footer p {
+
+    color: #999999;
+
+    font-size: 12px;
+
+    margin-top: 8px;
+}
+
+
+/* =========================
+   MOBILE
+========================= */
+
+@media (max-width: 850px) {
+
+    .navbar {
+
+        height: 70px;
+
+        padding: 0 20px;
+    }
+
+    .nav-logo img {
+
+        width: 90px;
+    }
+
+    nav {
+
+        gap: 12px;
+    }
+
+    nav a {
+
+        font-size: 9px;
+    }
+
+    .cart {
+
+        font-size: 16px;
+    }
+
+    .hero {
+
+        min-height: 80vh;
+
+        padding: 30px;
+    }
+
+    .hero h1 {
+
+        font-size: 80px;
+    }
+
+    .hero h1 span {
+
+        -webkit-text-stroke: 2px #111111;
+    }
+
+    .products {
+
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .product-image {
+
+        height: 280px;
+    }
+
+    .about {
+
+        grid-template-columns: 1fr;
+    }
+
+    .about-image {
+
+        height: 450px;
+    }
+
+    .about-content h2 {
+
+        font-size: 50px;
+    }
+}
+
+
+@media (max-width: 550px) {
+
+    nav {
+
+        display: none;
+    }
+
+    .navbar {
+
+        justify-content: space-between;
+    }
+
+    .hero {
+
+        min-height: 75vh;
+
+        background-position: center;
+    }
+
+    .hero h1 {
+
+        font-size: 65px;
+    }
+
+    .hero-text {
+
+        font-size: 15px;
+    }
+
+    .intro {
+
+        padding: 70px 20px;
+    }
+
+    .intro h2 {
+
+        font-size: 32px;
+    }
+
+    .shop {
+
+        padding: 70px 15px;
+    }
+
+    .section-heading h2 {
+
+        font-size: 32px;
+    }
+
+    .products {
+
+        grid-template-columns: 1fr;
+    }
+
+    .product-image {
+
+        height: 380px;
+    }
+
+    .about-content {
+
+        padding: 60px 25px;
+    }
+
+    .about-content h2 {
+
+        font-size: 45px;
+    }
+
+    .slogan {
+
+        padding: 70px 20px;
+    }
+
+    .contact h2 {
+
+        font-size: 34px;
+    }
+
+}

@@ -1,0 +1,431 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>Mpahlas-Burg | Streetwear From Poortjie</title>
+
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="shop.css">
+    <link rel="stylesheet" href="extras.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat:wght@400;500;600;700;800;900&display=swap" rel="stylesheet">
+</head>
+
+<body>
+
+    <!-- NAVIGATION -->
+    <header class="navbar">
+
+        <div class="nav-logo">
+            <img src="mpahlas-logo/logo.jpg" alt="Mpahlas-logo">
+        </div>
+
+        <nav>
+            <a href="#home">Home</a>
+            <a href="#shop">Shop</a>
+            <a href="#about">About</a>
+            <a href="#contact">Contact</a>
+        </nav>
+
+        <div class="cart">
+            🛒 <span id="cart-count">0</span>
+        </div>
+
+    </header>
+
+
+    <!-- HERO SECTION -->
+    <section class="hero" id="home">
+
+        <div class="hero-overlay"></div>
+
+        <div class="hero-content">
+
+            <p class="small-title">FROM POORTJIE • SOUTH AFRICA</p>
+
+            <h1>
+                MPahlas<br>
+                <span>BURG</span>
+            </h1>
+
+            <p class="hero-text">
+                Streetwear made with attitude,
+                culture and individuality.
+            </p>
+
+            <a href="#shop" class="hero-button">
+                SHOP COLLECTION
+            </a>
+
+        </div>
+
+    </section>
+
+    <!-- BRAND INTRO -->
+    <section class="intro">
+
+        <p class="red-text">WELCOME TO</p>
+
+        <h2>MPAHLAS-BURG</h2>
+
+        <p>
+            A streetwear brand born in Poortjie.
+            We create fashion for people who are not afraid
+            to stand out and express themselves.
+        </p>
+
+    </section>
+
+
+    <!-- SHOP -->
+    <section class="shop" id="shop">
+
+        <div class="section-heading">
+
+            <p>OUR COLLECTION</p>
+
+            <h2>SHOP MPAHLAS</h2>
+
+        </div>
+
+
+        <div class="products">
+
+
+            <!-- PRODUCT 1 -->
+            <div class="product-card">
+
+                <div class="product-image puffer">
+                  <img src="images/Mpahlas-Puffer.jpg" alt="Mpahlas-Puffer">
+                </div>
+
+                <div class="product-info">
+
+                    <h3>Mpahla's Puffer</h3>
+
+                    <p>Premium streetwear puffer jacket.</p>
+
+                    <div class="product-bottom">
+
+                        <strong>R849.99</strong>
+
+                        <button onclick="addToCart('Mpahlas-Puffer')">
+                            ADD TO CART
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 2 -->
+            <div class="product-card">
+
+                <div class="product-image hoodie">
+                  <img src="images/Mpahlas-Hoodies.jpg" alt="Mpahlas-Hoodies">
+                </div>
+
+                <div class="product-info">
+
+                    <h3>Mpahla's Hoodie</h3>
+
+                    <p>Classic oversized streetwear hoodie.</p>
+
+                    <div class="product-bottom">
+
+                        <strong>R349.99</strong>
+
+                        <button onclick="addToCart('Mpahlas-Hoodie')">
+                            ADD TO CART
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 3 -->
+            <div class="product-card">
+
+                <div class="product-image retro">
+                  <img src="images/Retro Tracksuit.jpg" alt="Retro Tracksuit">
+                </div>
+
+                <div class="product-info">
+
+                    <h3>Retro Tracksuit</h3>
+
+                    <p>Vintage-inspired tracksuit collection.</p>
+
+                    <div class="product-bottom">
+
+                        <strong>R549.99</strong>
+
+                        <button onclick="addToCart('Retro Tracksuit')">
+                            ADD TO CART
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 4 -->
+            <div class="product-card">
+
+                <div class="product-image women">
+                  <img src="images/Women Tracksuit.jpg" alt="Women Tracksuit">
+                </div>
+
+                <div class="product-info">
+
+                    <h3>Women's Tracksuit</h3>
+
+                    <p>Comfortable women's streetwear fit.</p>
+
+                    <div class="product-bottom">
+
+                        <strong>R399.99</strong>
+
+                        <button onclick="addToCart('Women Tracksuit')">
+                            ADD TO CART
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 5 -->
+            <div class="product-card">
+
+                <div class="product-image cap">
+                  <img src="images/Corduroy Cap.jpg" alt="Corduroy Cap">
+                </div>
+
+                <div class="product-info">
+
+                    <h3>Corduroy Cap</h3>
+
+                    <p>Premium corduroy Mpahlas-Burg cap.</p>
+
+                    <div class="product-bottom">
+
+                        <strong>R199.99</strong>
+
+                        <button onclick="addToCart('Corduroy Cap')">
+                            ADD TO CART
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+
+            <!-- PRODUCT 6 -->
+            <div class="product-card">
+
+                <div class="product-image slutchi">
+                  <img src="images/Mpahlas-Slutchi.jpg" alt="Mpahlas-Slutchi">
+                </div>
+
+                <div class="product-info">
+
+                    <h3>Mpahla's Slutchi</h3>
+
+                    <p>Unique Mpahlas-Burg streetwear piece.</p>
+
+                    <div class="product-bottom">
+
+                        <strong>R199.99</strong>
+
+                        <button onclick="addToCart('Mpahlas Slutchi')">
+                            ADD TO CART
+                        </button>
+
+                    </div>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </section>
+
+
+  <!-- ============ NEW RELEASES / LIMITED DROP ============
+     Paste this right ABOVE your shop section (or wherever you want the drop to show).
+     Cards in here work with the cart automatically. -->
+
+<section class="new-releases" id="new-releases">
+
+    <p class="shop-eyebrow">NEW DROP</p>
+    <h2 class="shop-title">NEW RELEASES</h2>
+
+    <!-- Countdown to the end of the drop. Change the date/time (keep the format).
+         Delete this line if you don't want a countdown. -->
+    <p class="drop-countdown" data-drop-end="2026-11-01T23:59:00+02:00"></p>
+
+    <div class="products">
+
+        <!-- LIMITED PRODUCT 1 (copy this block for each new release) -->
+        <div class="product-card" data-colors="White,Black,Brown,Pink,Red,Blue">
+
+            <span class="limited-badge">LIMITED EDITION</span>
+
+            <div class="product-image">
+                <img src="images/Mpahla's Limited Tee.jpg" alt="Mpahla's Limited Tee">
+            </div>
+
+            <div class="product-info">
+
+                <h3>Mpahla's Limited Tee</h3>
+
+                <p>Limited run. Once it's gone, it's gone.</p>
+
+                <p class="stock-left">Only 10 pieces made</p>
+
+                <div class="product-bottom">
+
+                    <strong>R250</strong>
+
+                    <button>
+                        ADD TO CART
+                    </button>
+
+                </div>
+
+            </div>
+
+        </div>
+
+    </div>
+
+</section>
+
+
+    <!-- BRAND SECTION -->
+    <section class="about" id="about">
+
+        <div class="about-image"></div>
+
+        <div class="about-content">
+
+            <p class="red-text">OUR STORY</p>
+
+            <h2>BORN IN<br>POORTJIE.</h2>
+
+            <p>
+                Mpahlas-Burg is more than clothing.
+                It represents confidence, creativity,
+                culture and the streets that shaped us.
+            </p>
+
+            <p>
+                From Poortjie to everywhere,
+                we are building a brand that speaks
+                for itself.
+            </p>
+
+            <a href="#shop" class="dark-button">
+                EXPLORE THE BRAND
+            </a>
+
+        </div>
+
+    </section>
+
+
+    <!-- SLOGAN -->
+    <section class="slogan">
+
+        <div>
+
+            <h2>
+                IT'S A BRAND THAT SIGNIFIES
+                ALL OF US WHO FELL IN LOVE
+                WITH THE MPAHLAS.
+            </h2>
+
+            <p>MPAHLAS-BURG</p>
+
+        </div>
+
+    </section>
+
+
+    <!-- CONTACT -->
+    <section class="contact" id="contact">
+
+        <p class="red-text">GET IN TOUCH</p>
+
+        <h2>READY TO ORDER?</h2>
+
+        <p>
+            Contact Mpahlas-Burg directly to place your order
+            or ask about sizes, colours and availability.
+        </p>
+
+        <a
+            href="https://wa.me/27633629179"
+            target="_blank"
+            class="whatsapp-button">
+            ORDER ON WHATSAPP
+        </a>
+
+    </section>
+
+
+    <!-- FOOTER -->
+    <footer>
+
+        <div class="footer-logo">
+            <img src="mpahlas-logo/logo.jpg" alt="Mpahlas-logo">
+        </div>
+
+        <p>
+            © 2026 Mpahlas-Burg. All Rights Reserved.
+        </p>
+
+        <p>
+            Proudly from Poortjie 🇿🇦
+        </p>
+
+    </footer>
+
+
+    <!-- JAVASCRIPT -->
+    <script>
+
+        let cartCount = 0;
+
+        function addToCart(product) {
+
+            cartCount++;
+
+            document.getElementById("cart-count").innerText = cartCount;
+
+            alert(product + " has been added to your cart!");
+
+        }
+
+    </script>
+<script src="cart.js"></script>
+<script src="extras.js"></script>
+</body>
+</html>
