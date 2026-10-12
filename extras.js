@@ -89,3 +89,35 @@
     document.addEventListener("keydown", e => { if (e.key === "Escape") lb.classList.remove("open"); });
 
 })();
+// ===== Multiple designs per product =====
+// On a product-card add: data-images="images/a.jpg,images/b.jpg"
+// Optional names:        data-labels="Black design,White design"
+document.querySelectorAll(".product-card[data-images]").forEach(card => {
+    const imgs = card.dataset.images.split(",").map(s => s.trim()).filter(Boolean);
+    const labels = (card.dataset.labels || "").split(",").map(s => s.trim());
+    const main = card.querySelector(".product-image img");
+    const holder = card.querySelector(".product-image");
+    if (!main || imgs.length < 2) return;
+
+    const titleEl = card.querySelector("h3");
+    const baseName = titleEl ? titleEl.textContent.trim() : "Product";
+
+    const row = document.createElement("div");
+    row.className = "design-thumbs";
+    row.innerHTML = imgs.map((src, i) =>
+        `<img src="${src}" class="${i === 0 ? "active" : ""}" data-i="${i}" alt="Design ${i + 1}">`
+    ).join("");
+    holder.insertAdjacentElement("afterend", row);
+
+    function pick(i) {
+        main.src = imgs[i];
+        row.querySelectorAll("img").forEach((t, n) => t.classList.toggle("active", n === i));
+        // the cart picks up the design name automatically
+        card.dataset.name = labels[i] ? `${baseName} (${labels[i]})` : baseName;
+    }
+    row.addEventListener("click", e => {
+        const t = e.target.closest("img");
+        if (t) pick(Number(t.dataset.i));
+    });
+    pick(0);
+});
