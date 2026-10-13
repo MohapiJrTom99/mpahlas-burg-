@@ -205,3 +205,54 @@
 .t-step { margin: 8px auto; padding: 10px; max-width: 280px;
   border-radius: 6px; background: #ddd; color: #555; }
 .t-step.done { background: #1db954; color: #fff; }
+/* ===== Street gallery ===== */
+.street-gallery {
+    padding: 50px 12px;
+    background: #111;
+    text-align: center;
+}
+.street-gallery h2 {
+    font-family: "Anton", sans-serif;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    color: #fff;
+    margin: 0 0 6px;
+}
+.street-caption {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    color: #ccc;
+    margin: 0 0 22px;
+}
+.street-grid {
+    column-count: 2;
+    column-gap: 8px;
+    max-width: 1100px;
+    margin: 0 auto;
+}
+@media (min-width: 700px)  { .street-grid { column-count: 3; } }
+@media (min-width: 1000px) { .street-grid { column-count: 4; } }
+.street-grid img {
+    width: 100%;
+    display: block;
+    margin: 0 0 8px;
+    border-radius: 10px;
+    break-inside: avoid;
+    cursor: pointer;
+    background: #000;
+}
+.street-zoom {
+    position: fixed;
+    inset: 0;
+    background: rgba(0,0,0,.93);
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    z-index: 99999;
+    padding: 12px;
+}
+.street-zoom img {
+    max-width: 100%;
+    max-height: 100%;
+    border-radius: 10px;
+}

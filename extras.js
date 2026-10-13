@@ -121,3 +121,32 @@ document.querySelectorAll(".product-card[data-images]").forEach(card => {
     });
     pick(0);
 });
+// ===== Street gallery (auto-built, tap to enlarge) =====
+(function () {
+    const grid = document.getElementById("streetGrid");
+    if (!grid) return;
+    const total = Number(grid.dataset.count) || 39;
+
+    for (let i = 1; i <= total; i++) {
+        const img = document.createElement("img");
+        img.loading = "lazy";
+        img.alt = "Mpahlasburg street fit " + i;
+        img.src = "fits/fit-" + i + ".jpg";
+        img.onerror = function () {
+            if (!img.dataset.triedPng) {
+                img.dataset.triedPng = "1";
+                img.src = "fits/fit-" + i + ".png";
+            } else {
+                img.remove();
+            }
+        };
+        img.addEventListener("click", () => {
+            const box = document.createElement("div");
+            box.className = "street-zoom";
+            box.innerHTML = '<img src="' + img.src + '" alt="' + img.alt + '">';
+            box.addEventListener("click", () => box.remove());
+            document.body.appendChild(box);
+        });
+        grid.appendChild(img);
+    }
+})();
