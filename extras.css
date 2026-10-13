@@ -256,3 +256,60 @@
     max-height: 100%;
     border-radius: 10px;
 }
+/* ===== 2 for R600 bundle deal ===== */
+.bundle-deal {
+    max-width: 520px;
+    margin: 0 auto 30px;
+    border: 3px solid #e10613;
+    border-radius: 16px;
+    overflow: hidden;
+    background: #0b0b0b;
+}
+.bundle-video video {
+    display: block;
+    width: 100%;
+    max-height: 75vh;
+    background: #000;
+}
+.bundle-price {
+    padding: 18px 16px 22px;
+    text-align: center;
+}
+.bundle-tag {
+    display: inline-block;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    font-size: 0.75rem;
+    letter-spacing: 3px;
+    color: #fff;
+    border: 2px solid #e10613;
+    padding: 4px 12px;
+    margin-bottom: 10px;
+}
+.bundle-price h3 {
+    font-family: "Anton", sans-serif;
+    font-size: 2.6rem;
+    letter-spacing: 2px;
+    color: #fff;
+    margin: 6px 0;
+}
+.bundle-price h3 em {
+    font-style: normal;
+    color: #e10613;
+}
+.bundle-price p {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    color: #ccc;
+    margin: 0 0 16px;
+}
+.bundle-btn {
+    display: inline-block;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    background: #e10613;
+    color: #fff;
+    text-decoration: none;
+    padding: 12px 22px;
+    border-radius: 8px;
+}
