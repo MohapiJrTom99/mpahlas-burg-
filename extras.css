@@ -313,3 +313,53 @@
     padding: 12px 22px;
     border-radius: 8px;
 }
+/* ===== Follow us ===== */
+.follow-us {
+    padding: 45px 16px;
+    text-align: center;
+    background: #0b0b0b;
+}
+.follow-us h2 {
+    font-family: "Anton", sans-serif;
+    font-size: 1.8rem;
+    letter-spacing: 2px;
+    color: #fff;
+    margin: 0 0 6px;
+}
+.follow-us p {
+    font-family: "Montserrat", sans-serif;
+    font-weight: 500;
+    color: #ccc;
+    margin: 0 0 20px;
+}
+.follow-buttons {
+    display: flex;
+    justify-content: center;
+    gap: 12px;
+    flex-wrap: wrap;
+}
+.follow-btn {
+    display: inline-flex;
+    align-items: center;
+    gap: 10px;
+    font-family: "Montserrat", sans-serif;
+    font-weight: 800;
+    letter-spacing: 1px;
+    text-decoration: none;
+    color: #fff;
+    padding: 12px 22px;
+    border-radius: 10px;
+    border: 2px solid transparent;
+}
+.follow-btn.fb { background: #1877f2; }
+.follow-btn.tt { background: #000; border-color: #fff; }
+.follow-icon {
+    display: inline-flex;
+    align-items: center;
+    justify-content: center;
+    width: 26px;
+    height: 26px;
+    border-radius: 50%;
+    background: rgba(255,255,255,.2);
+    font-weight: 800;
+}
