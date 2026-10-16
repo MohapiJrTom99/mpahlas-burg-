@@ -150,3 +150,98 @@ document.querySelectorAll(".product-card[data-images]").forEach(card => {
         grid.appendChild(img);
     }
 })();
+// ===== Announcement bar rotation =====
+(function () {
+    const bar = document.getElementById("announce");
+    if (!bar) return;
+    const msgs = [
+        "ORDER EASILY ON WHATSAPP",
+        "2 FOR R600 · LIMITED TEES",
+        "MPAHLASBURG · EMPAHLENI TO THE WORLD"
+    ];
+    let i = 0;
+    setInterval(() => {
+        bar.style.opacity = 0;
+        setTimeout(() => {
+            i = (i + 1) % msgs.length;
+            bar.textContent = msgs[i];
+            bar.style.opacity = 1;
+        }, 300);
+    }, 4000);
+})();
+
+// ===== Product search =====
+(function () {
+    const panel = document.getElementById("searchPanel");
+    const input = document.getElementById("searchInput");
+    const empty = document.getElementById("searchEmpty");
+    if (!panel || !input) return;
+
+    const icon = function (color) {
+        return '<svg width="16" height="16" viewBox="0 0 24 24" fill="none" stroke="' + color +
+               '" stroke-width="2.5" stroke-linecap="round"><circle cx="11" cy="11" r="7"/><path d="M20 20l-4-4"/></svg>';
+    };
+
+    // small pill search box
+    panel.style.cssText = "background:transparent;padding:8px 16px;text-align:center;";
+    input.style.cssText = "width:100%;max-width:260px;height:36px;box-sizing:border-box;padding:0 16px 0 38px;" +
+        "font-size:0.9rem;color:#000;border:1.5px solid #000;border-radius:999px;box-shadow:0 2px 8px rgba(0,0,0,.15);";
+    input.style.background = '#fff url("data:image/svg+xml,' + encodeURIComponent(icon("#000")) +
+        '") no-repeat 13px center / 16px';
+    empty.style.color = "#000";
+
+    // small black round button with white magnifier
+    const btn = document.createElement("button");
+    btn.setAttribute("aria-label", "Search");
+    btn.innerHTML = icon("#fff");
+    btn.style.cssText = "width:36px;height:36px;border-radius:50%;background:#000;border:0;cursor:pointer;" +
+        "display:inline-flex;align-items:center;justify-content:center;padding:0;margin-left:10px;";
+
+    const header = document.querySelector("header") || document.querySelector("nav");
+    if (header) {
+        header.appendChild(btn);
+    } else {
+        btn.style.position = "fixed";
+        btn.style.top = "70px";
+        btn.style.right = "12px";
+        btn.style.zIndex = "9999";
+        document.body.appendChild(btn);
+    }
+
+    btn.addEventListener("click", function () {
+        panel.classList.toggle("open");
+        if (panel.classList.contains("open")) input.focus();
+    });
+
+    input.addEventListener("input", function () {
+        const q = input.value.trim().toLowerCase();
+        let shown = 0;
+        document.querySelectorAll(".product-card").forEach(function (card) {
+            const match = !q || (card.textContent || "").toLowerCase().includes(q);
+            card.style.display = match ? "" : "none";
+            if (match) shown++;
+        });
+        empty.style.display = (q && shown === 0) ? "block" : "none";
+        if (q) {
+            const shop = document.getElementById("shop");
+            if (shop) shop.scrollIntoView({ behavior: "smooth" });
+        }
+    });
+})();
+// ===== Footer "Track my order" jumps to the order tracker =====
+(function () {
+    const box = document.querySelector('input[placeholder*="order no" i]');
+    if (!box) return;
+    const holder = box.closest("section") || box.parentElement;
+    if (!holder.id) holder.id = "track";
+
+    document.querySelectorAll(".site-footer a").forEach(function (a) {
+        if (a.textContent.trim().toLowerCase() === "track my order") {
+            a.setAttribute("href", "#" + holder.id);
+            a.removeAttribute("target");
+            a.addEventListener("click", function () {
+                setTimeout(function () { box.focus(); }, 600);
+            });
+        }
+    });
+})();
